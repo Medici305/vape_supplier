@@ -2,6 +2,8 @@
 @import "./layout/jumbotron";
 @import "./layout/header";
 @import "./layout/carousel";
+@import "./layout/platform";
+@import "./layout/footer";
 @import "./helpers/variables";
 
 * {
@@ -74,8 +76,17 @@ h3 {
   }
 }
 
+h5 {
+  color: $Orange;
+  font: {
+    family: "Bebas Neue";
+    size: 2.5rem;
+    weight: 200;
+  }
+}
+
 p {
-  color: $Grey;
+  color: $Grey_text;
   font-size: 1.1rem;
   margin: 1.5em 0;
 
@@ -106,7 +117,7 @@ button {
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  width: 45%;
+  width: 40%;
   transition: all 0.2s ease-in-out;
   @include mobile {
     padding: 1rem 2rem;
@@ -132,5 +143,18 @@ button {
   }
   @include mobile {
     margin-left: 0rem;
+  }
+}
+
+.sub-title {
+  text-align: center;
+  display: grid;
+  position: relative;
+  margin: 2rem 0;
+  h1,
+  h3 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
   }
 }

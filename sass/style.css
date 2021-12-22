@@ -147,19 +147,7 @@
 .making-money {
   min-height: 100vh;
 }
-.making-money .sub-title {
-  text-align: center;
-  display: grid;
-  position: relative;
-  margin: 2rem 0;
-}
-.making-money .sub-title h1,
-.making-money .sub-title h3 {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: center;
-}
-.making-money .sub-title img {
+.making-money img {
   position: absolute;
   right: 0;
   top: 15%;
@@ -234,6 +222,125 @@
     line-height: 15rem;
   }
 }
+.platform {
+  padding: 6% 0;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.platform .top,
+.platform .bottom {
+  width: 100%;
+}
+.platform .top {
+  padding: 2% 6%;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.platform .top .left,
+.platform .top .right {
+  width: 100%;
+}
+.platform .bottom {
+  padding: 0 6%;
+  margin-top: 2rem;
+  background: #ff6200;
+}
+.platform .bottom .subscribe-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.platform .bottom .subscribe-section p {
+  color: black;
+  flex: 0.4;
+}
+.platform .bottom .subscribe-section .input-box {
+  flex: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #ff6200;
+  position: relative;
+}
+.platform .bottom .subscribe-section .input-box input,
+.platform .bottom .subscribe-section .input-box button {
+  height: 100%;
+}
+.platform .bottom .subscribe-section .input-box input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  outline: none;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: #868686;
+}
+.platform .bottom .subscribe-section .input-box input:focus {
+  outline: none;
+}
+.platform .bottom .subscribe-section .input-box button {
+  color: white;
+  background: #07223f;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  border: none;
+  height: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .platform .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10% 6%;
+  }
+  .platform .bottom .subscribe-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .platform .bottom .subscribe-section br {
+    display: none;
+  }
+  .platform .bottom .subscribe-section p {
+    text-align: center;
+  }
+  .platform .bottom .subscribe-section .input-box {
+    flex: 1;
+    width: 100%;
+  }
+  .platform .bottom .subscribe-section .input-box button {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 578px) {
+  .platform {
+    padding: 15% 0;
+  }
+  .platform .bottom {
+    padding: 6%;
+  }
+}
+.footer {
+  min-height: 60vh;
+  background: #07223f;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -308,6 +415,13 @@ h3 {
   }
 }
 
+h5 {
+  color: #ff6200;
+  font-family: "Bebas Neue";
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
 p {
   color: #868686;
   font-size: 1.1rem;
@@ -341,7 +455,7 @@ button {
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  width: 45%;
+  width: 40%;
   transition: all 0.2s ease-in-out;
 }
 @media (max-width: 578px) {
@@ -372,6 +486,19 @@ button {
   .button-solid {
     margin-left: 0rem;
   }
+}
+
+.sub-title {
+  text-align: center;
+  display: grid;
+  position: relative;
+  margin: 2rem 0;
+}
+.sub-title h1,
+.sub-title h3 {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */

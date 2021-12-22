@@ -4,25 +4,12 @@
 
 .making-money {
   min-height: 100vh;
-  .sub-title {
-    text-align: center;
-    display: grid;
-    position: relative;
-    margin: 2rem 0;
-
-    h1,
-    h3 {
-      grid-column: 1;
-      grid-row: 1;
-      align-self: center;
-    }
     img {
       position: absolute;
       right: 0;
       top: 15%;
       transform: translateY(50%);
     }
-  }
   #slider {
     min-height: 50vh;
     position: relative;

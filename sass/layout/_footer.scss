@@ -1,0 +1,8 @@
+// Imports
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+.footer {
+  min-height: 60vh;
+  background: $Purple;
+}

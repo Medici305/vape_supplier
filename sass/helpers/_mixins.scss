@@ -9,6 +9,12 @@
 }
 
 @mixin background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin header-bg {
   background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center top/
     cover;
   @include mobile {

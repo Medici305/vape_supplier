@@ -1,0 +1,125 @@
+// Imports
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+.platform {
+  //min-height: 100vh;
+  padding: 6% 0;
+  background-color: $Grey_bg;
+  @include flex(column, space-between, center);
+  .top,
+  .bottom {
+    //border: 2px solid black;
+    width: 100%;
+  }
+  .top {
+    //flex: 0.6;
+    padding: 2% 6%;
+
+    background: #fff;
+    @include flex(row, space-between, center);
+    //height: 100%;
+    .left,
+    .right {
+      width: 100%;
+      //border: 2px solid black;
+    }
+    .left {
+      //background: blue;
+    }
+    .right {
+    }
+  }
+  .bottom {
+    //flex: 0.3;
+    padding: 0 6%;
+    margin-top: 2rem;
+    background: $Orange;
+    .subscribe-section {
+      @include flex(row, space-between, center);
+      p {
+        color: black;
+        // border: 2px solid black;
+        flex: 0.4;
+      }
+      .input-box {
+        flex: 0.5;
+        @include flex(row, center, center);
+        background: $Orange;
+        position: relative;
+        input,
+        button {
+          height: 100%;
+        }
+        input {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          outline: none;
+          height: 2.5rem;
+          border-radius: 0.5rem;
+          padding: {
+            left: 0.5rem;
+            right: 0.5rem;
+          }
+          border: $Grey_text;
+
+          &:focus {
+            outline: none;
+          }
+        }
+        button {
+          color: white;
+          background: $Purple;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          border: none;
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@include laptop {
+  .platform {
+    .top {
+      @include flex(column, space-between, center);
+      padding: 10% 6%;
+    }
+    .bottom {
+      .subscribe-section {
+        @include flex(column-reverse, space-between, center);
+        br {
+          display: none;
+        }
+        p {
+          text-align: center;
+        }
+        .input-box {
+          flex: 1;
+          width: 100%;
+          button {
+            padding: {
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .platform {
+    padding: 15% 0;
+
+    .bottom {
+      padding: 6%;
+    }
+  }
+}

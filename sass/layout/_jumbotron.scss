@@ -4,7 +4,7 @@
 
 .Jumbotron {
   height: 100%;
-  @include background;
+  @include header-bg;
 
   nav {
     padding: 4% 0;
