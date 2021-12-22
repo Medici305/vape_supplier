@@ -1,0 +1,121 @@
+// Imports
+@import "../helpers/mixins";
+
+.Jumbotron {
+  min-height: 120vh;
+  background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center top/
+    cover;
+
+  nav {
+    //height: 20vh;
+    padding: 4% 0;
+    background: green;
+    @include flex(row, space-between, center);
+    a {
+      border: 2px solid yellow;
+      flex-shrink: 0;
+      img {
+        max-width: max-content;
+        height: auto;
+        mix-blend-mode: difference;
+        color: red;
+      }
+    }
+    .nav-links {
+      //flex: 1;
+      transition: all 1s ease-in-out;
+      border: 2px solid red;
+      background: black;
+      //margin-left: 14rem;
+
+      ul {
+        @include flex(row, none, center);
+
+        a {
+          font-size: 0.75rem;
+          border-color: white;
+          //display: inline-block;
+          padding: 0 1.5rem;
+          color: #fff;
+          font-weight: 600;
+          &::after {
+            content: "";
+            width: 0%;
+            height: 0.2rem;
+            background: #ffffff;
+            display: block;
+            margin: auto;
+            transition: all 0.3s ease;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .fa {
+      display: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+  }
+}
+
+// Responsive
+@include laptop {
+  .Jumbotron {
+    nav {
+      .logo {
+        flex: 0.2;
+      }
+      .nav-links {
+        position: fixed;
+        background: #000000;
+        height: 100vh;
+        width: 20rem;
+        top: 0;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+        right: -19rem;
+        text-align: left;
+        z-index: 1;
+        ul {
+          padding: 2rem;
+          @include flex(column, none, center);
+
+          a {
+            padding: {
+              top: 2rem;
+              bottom: 2rem;
+            }
+            display: block;
+          }
+        }
+      }
+      #toggle:checked ~ .nav-links {
+        right: 0;
+      }
+      #toggle:checked ~ img {
+        border: 1px solid white;
+      }
+      .fa {
+        display: block;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .jumbotron {
+    nav {
+      @include mobile {
+        .logo {
+          flex: 0.3;
+        }
+      }
+    }
+  }
+}

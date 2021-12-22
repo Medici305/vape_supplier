@@ -1,0 +1,40 @@
+// Imports
+@import "./layout/jumbotron";
+@import "./helpers/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "proxima-nova", sans-serif;
+  font-display: auto;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+h4 {
+  color: $Purple;
+}
+
+section {
+  padding: 0 10%;
+}
+
+.button-fill {
+  color: white;
+  font: {
+    weight: bold;
+    size: 0.75rem;
+  }
+  border: none;
+  background: $Orange;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

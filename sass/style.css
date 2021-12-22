@@ -1,0 +1,140 @@
+.Jumbotron {
+  min-height: 120vh;
+  background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center top/cover;
+}
+.Jumbotron nav {
+  padding: 4% 0;
+  background: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.Jumbotron nav a {
+  border: 2px solid yellow;
+  flex-shrink: 0;
+}
+.Jumbotron nav a img {
+  max-width: max-content;
+  height: auto;
+  mix-blend-mode: difference;
+  color: red;
+}
+.Jumbotron nav .nav-links {
+  transition: all 1s ease-in-out;
+  border: 2px solid red;
+  background: black;
+}
+.Jumbotron nav .nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+}
+.Jumbotron nav .nav-links ul a {
+  font-size: 0.75rem;
+  border-color: white;
+  padding: 0 1.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+.Jumbotron nav .nav-links ul a::after {
+  content: "";
+  width: 0%;
+  height: 0.2rem;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+.Jumbotron nav .nav-links ul a:hover::after {
+  width: 100%;
+}
+.Jumbotron nav .fa {
+  display: none;
+  color: #fff;
+  cursor: pointer;
+}
+.Jumbotron nav input[type=checkbox] {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .Jumbotron nav .logo {
+    flex: 0.2;
+  }
+  .Jumbotron nav .nav-links {
+    position: fixed;
+    background: #000000;
+    height: 100vh;
+    width: 20rem;
+    top: 0;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    right: -19rem;
+    text-align: left;
+    z-index: 1;
+  }
+  .Jumbotron nav .nav-links ul {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+  }
+  .Jumbotron nav .nav-links ul a {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: block;
+  }
+  .Jumbotron nav #toggle:checked ~ .nav-links {
+    right: 0;
+  }
+  .Jumbotron nav #toggle:checked ~ img {
+    border: 1px solid white;
+  }
+  .Jumbotron nav .fa {
+    display: block;
+    margin: 1rem;
+  }
+}
+@media (max-width: 578px) and (max-width: 578px) {
+  .jumbotron nav .logo {
+    flex: 0.3;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "proxima-nova", sans-serif;
+  font-display: auto;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+h4 {
+  color: #07223f;
+}
+
+section {
+  padding: 0 10%;
+}
+
+.button-fill {
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  border: none;
+  background: #ff6200;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
