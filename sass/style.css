@@ -154,7 +154,7 @@
   transform: translateY(50%);
 }
 .making-money #slider {
-  min-height: 50vh;
+  min-height: 75vh;
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -176,47 +176,48 @@
   cursor: pointer;
   transition: transform 0.4s ease;
 }
+.making-money #slider label img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0%);
+}
 .making-money #slider #s2:checked ~ #slide4,
 .making-money #slider #s3:checked ~ #slide2,
 .making-money #slider #s4:checked ~ #slide3 {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-  transform: translate3d(-15%, 0, -100px);
+  transform: translate3d(-25%, 0, -100px);
   opacity: 0.4;
 }
 .making-money #slider #s2:checked ~ #slide2,
 .making-money #slider #s3:checked ~ #slide3,
 .making-money #slider #s4:checked ~ #slide4 {
-  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
   transform: translate3d(0, 0, 0);
 }
 .making-money #slider #s2:checked ~ #slide3,
 .making-money #slider #s3:checked ~ #slide4,
 .making-money #slider #s4:checked ~ #slide2 {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-  transform: translate3d(15%, 0, -100px);
+  transform: translate3d(25%, 0, -100px);
   opacity: 0.4;
 }
 .making-money #slider #slide2 {
-  background: #07223f;
+  background: none;
+  border: none;
 }
 .making-money #slider #slide3 {
-  background: #07223f;
+  background: none;
 }
 .making-money #slider #slide4 {
-  background: #07223f;
+  background: none;
 }
 
-@media (max-width: 768px) {
-  .making-money img {
-    display: none;
-  }
-}
 @media (max-width: 578px) {
   .making-money {
     min-height: 50vh;
   }
   .making-money #slider {
-    min-height: 30vh;
+    min-height: 40vh;
   }
   .making-money #slider label {
     line-height: 15rem;
