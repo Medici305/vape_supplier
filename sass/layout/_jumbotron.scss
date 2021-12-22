@@ -1,18 +1,18 @@
 // Imports
 @import "../helpers/mixins";
+@import "../helpers/variables";
 
 .Jumbotron {
-  min-height: 120vh;
-  background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center top/
-    cover;
+  height: 100%;
+  @include background;
 
   nav {
     //height: 20vh;
     padding: 4% 0;
-    background: green;
+    //background: green;
     @include flex(row, space-between, center);
     a {
-      border: 2px solid yellow;
+      //border: 2px solid yellow;
       flex-shrink: 0;
       img {
         max-width: max-content;
@@ -24,8 +24,8 @@
     .nav-links {
       //flex: 1;
       transition: all 1s ease-in-out;
-      border: 2px solid red;
-      background: black;
+      //border: 2px solid red;
+      //background: black;
       //margin-left: 14rem;
 
       ul {
@@ -33,7 +33,7 @@
 
         a {
           font-size: 0.75rem;
-          border-color: white;
+          //border-color: white;
           //display: inline-block;
           padding: 0 1.5rem;
           color: #fff;
@@ -58,27 +58,23 @@
       color: #fff;
       cursor: pointer;
     }
-    input[type="checkbox"] {
-      display: none;
-    }
   }
 }
 
 // Responsive
 @include laptop {
   .Jumbotron {
+    //height: 200vh;
     nav {
-      .logo {
-        flex: 0.2;
-      }
       .nav-links {
         position: fixed;
-        background: #000000;
+        background: $Purple;
+
         height: 100vh;
         width: 20rem;
         top: 0;
-        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
-        right: -19rem;
+        box-shadow: 2px 2px 50px gray;
+        right: -20rem;
         text-align: left;
         z-index: 1;
         ul {
@@ -90,31 +86,16 @@
               top: 2rem;
               bottom: 2rem;
             }
-            display: block;
+            //display: block;
+          }
+          button {
+            width: 100%;
           }
         }
-      }
-      #toggle:checked ~ .nav-links {
-        right: 0;
-      }
-      #toggle:checked ~ img {
-        border: 1px solid white;
       }
       .fa {
         display: block;
         margin: 1rem;
-      }
-    }
-  }
-}
-
-@include mobile {
-  .jumbotron {
-    nav {
-      @include mobile {
-        .logo {
-          flex: 0.3;
-        }
       }
     }
   }

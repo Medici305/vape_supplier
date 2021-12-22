@@ -1,17 +1,24 @@
 .Jumbotron {
-  min-height: 120vh;
-  background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center top/cover;
+  height: 100%;
+  background-image: url("../../assets/Header_Home_Desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 578px) {
+  .Jumbotron {
+    background-image: url("../../assets/Header_Home_Mobile.jpg");
+    background-position: center;
+  }
 }
 .Jumbotron nav {
   padding: 4% 0;
-  background: green;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .Jumbotron nav a {
-  border: 2px solid yellow;
   flex-shrink: 0;
 }
 .Jumbotron nav a img {
@@ -22,8 +29,6 @@
 }
 .Jumbotron nav .nav-links {
   transition: all 1s ease-in-out;
-  border: 2px solid red;
-  background: black;
 }
 .Jumbotron nav .nav-links ul {
   display: flex;
@@ -33,7 +38,6 @@
 }
 .Jumbotron nav .nav-links ul a {
   font-size: 0.75rem;
-  border-color: white;
   padding: 0 1.5rem;
   color: #fff;
   font-weight: 600;
@@ -55,22 +59,16 @@
   color: #fff;
   cursor: pointer;
 }
-.Jumbotron nav input[type=checkbox] {
-  display: none;
-}
 
 @media (max-width: 992px) {
-  .Jumbotron nav .logo {
-    flex: 0.2;
-  }
   .Jumbotron nav .nav-links {
     position: fixed;
-    background: #000000;
+    background: #07223f;
     height: 100vh;
     width: 20rem;
     top: 0;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
-    right: -19rem;
+    box-shadow: 2px 2px 50px gray;
+    right: -20rem;
     text-align: left;
     z-index: 1;
   }
@@ -84,22 +82,62 @@
   .Jumbotron nav .nav-links ul a {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    display: block;
   }
-  .Jumbotron nav #toggle:checked ~ .nav-links {
-    right: 0;
-  }
-  .Jumbotron nav #toggle:checked ~ img {
-    border: 1px solid white;
+  .Jumbotron nav .nav-links ul button {
+    width: 100%;
   }
   .Jumbotron nav .fa {
     display: block;
     margin: 1rem;
   }
 }
-@media (max-width: 578px) and (max-width: 578px) {
-  .jumbotron nav .logo {
-    flex: 0.3;
+.row {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+}
+.row .col {
+  flex: 0.4;
+}
+
+.description-text {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .row .col {
+    flex: 0.7;
+  }
+}
+@media (max-width: 578px) {
+  .row {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    align-items: start;
+    position: relative;
+  }
+  .row .col {
+    flex: 1;
+  }
+  .row .col:nth-child(1) {
+    display: none;
+  }
+
+  .description-text {
+    display: block;
+  }
+  .description-text .row {
+    position: relative;
+    min-height: 100%;
+  }
+  .description-text .row .col {
+    position: absolute;
+    top: -7.5rem;
+    display: block;
   }
 }
 * {
@@ -118,23 +156,84 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  position: relative;
+  font-family: "Bebas Neue";
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 4rem;
+  color: #07223f;
+}
+h1 span {
+  color: #ff6200;
+}
+h1 img {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+@media (max-width: 578px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+p {
+  color: #868686;
+  font-size: 1.1rem;
+  margin: 1.5em 0;
+}
+@media (max-width: 578px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
 h4 {
   color: #07223f;
 }
 
 section {
-  padding: 0 10%;
+  padding: 0 5%;
+}
+@media (max-width: 992px) {
+  section {
+    padding: 0 5%;
+  }
+}
+
+button {
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 45%;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 578px) {
+  button {
+    padding: 1rem 2rem;
+  }
 }
 
 .button-fill {
   color: white;
-  font-weight: bold;
-  font-size: 0.75rem;
   border: none;
   background: #ff6200;
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
+}
+.button-fill:hover {
+  opacity: 0.8;
+}
+
+.button-solid {
+  color: #ff6200;
+  border: 2px solid #ff6200;
+  background: white;
+  margin-left: 1rem;
+}
+.button-solid:hover {
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=style.css.map */

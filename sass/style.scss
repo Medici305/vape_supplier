@@ -1,5 +1,6 @@
 // Imports
 @import "./layout/jumbotron";
+@import "./layout/header";
 @import "./helpers/variables";
 
 * {
@@ -18,23 +19,78 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  position: relative;
+  font: {
+    family: "Bebas Neue";
+    size: 5rem;
+    weight: 200;
+  }
+  line-height: 4rem;
+  color: $Purple;
+  span {
+    color: $Orange;
+  }
+  img {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  @include mobile {
+    font-size: 4rem;
+  }
+}
+
+p {
+  color: $Grey;
+  font-size: 1.1rem;
+  margin: 1.5em 0;
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
 h4 {
   color: $Purple;
 }
 
 section {
-  padding: 0 10%;
+  padding: 0 5%;
+  @include laptop {
+    padding: 0 5%;
+  }
 }
 
-.button-fill {
-  color: white;
+button {
   font: {
     weight: bold;
     size: 0.75rem;
   }
-  border: none;
-  background: $Orange;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  width: 45%;
+  transition: all 0.2s ease-in-out;
+  @include mobile {
+    padding: 1rem 2rem;
+  }
+}
+
+.button-fill {
+  color: white;
+  border: none;
+  background: $Orange;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.button-solid {
+  color: $Orange;
+  border: 2px solid $Orange;
+  background: white;
+  margin-left: 1rem;
+  &:hover {
+    opacity: 0.7;
+  }
 }

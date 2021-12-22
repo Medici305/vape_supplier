@@ -1,0 +1,53 @@
+// Imports
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+.row {
+  //border: 2px solid red;
+  min-height: 100vh;
+  @include flex(row, none, center);
+  .col {
+    flex: 0.4;
+  }
+}
+
+.description-text {
+  display: none;
+}
+
+// Responsive
+@include laptop {
+  .row {
+    .col {
+      flex: 0.7;
+      //border: 2px solid red;
+    }
+  }
+}
+
+@include mobile {
+  .row {
+    min-height: 70vh;
+    @include flex(row, none, start);
+    position: relative;
+    .col {
+      flex: 1;
+      &:nth-child(1) {
+        display: none;
+      }
+    }
+  }
+  .description-text {
+      display: block;
+    .row {
+      position: relative;
+      min-height: 100%;
+
+      .col {
+        position: absolute;
+        top: -7.5rem;
+        display: block;
+      }
+    }
+  }
+}
