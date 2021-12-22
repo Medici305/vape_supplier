@@ -3,7 +3,6 @@
 @import "../helpers/variables";
 
 .row {
-  //border: 2px solid red;
   min-height: 100vh;
   @include flex(row, none, center);
   .col {
@@ -20,16 +19,14 @@
   .row {
     .col {
       flex: 0.7;
-      //border: 2px solid red;
     }
   }
 }
 
 @include mobile {
   .row {
-    min-height: 70vh;
+    min-height: 60vh;
     @include flex(row, none, start);
-    position: relative;
     .col {
       flex: 1;
       &:nth-child(1) {
@@ -38,15 +35,18 @@
     }
   }
   .description-text {
-      display: block;
+    display: block;
     .row {
       position: relative;
-      min-height: 100%;
+      height: 100%;
 
       .col {
         position: absolute;
-        top: -7.5rem;
+        top: -2.5rem;
         display: block;
+        p {
+          line-height: 1.5rem;
+        }
       }
     }
   }

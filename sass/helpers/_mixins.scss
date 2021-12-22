@@ -9,13 +9,10 @@
 }
 
 @mixin background {
-  background-image: url("../../assets/Header_Home_Desktop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center top/
+    cover;
   @include mobile {
     background-image: url("../../assets/Header_Home_Mobile.jpg");
-    background-position: center;
   }
 }
 

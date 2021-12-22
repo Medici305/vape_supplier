@@ -1,0 +1,107 @@
+// Imports
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+.making-money {
+  min-height: 100vh;
+  .sub-title {
+    text-align: center;
+    display: grid;
+    position: relative;
+    margin: 2rem 0;
+
+    h1,
+    h3 {
+      grid-column: 1;
+      grid-row: 1;
+      align-self: center;
+    }
+    img {
+      position: absolute;
+      right: 0;
+      top: 15%;
+      transform: translateY(50%);
+    }
+  }
+  #slider {
+    min-height: 50vh;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    [type="radio"] {
+      display: none;
+    }
+
+    label {
+      margin: auto;
+      color: #fff;
+      text-align: center;
+      line-height: 20rem;
+      width: 60%;
+      height: 100%;
+      border-radius: 4px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+
+    #s2:checked ~ #slide4,
+    #s3:checked ~ #slide2,
+    #s4:checked ~ #slide3 {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3),
+        0 2px 2px 0 rgba(0, 0, 0, 0.2);
+      transform: translate3d(-15%, 0, -100px);
+      opacity: 0.4;
+    }
+
+    #s2:checked ~ #slide2,
+    #s3:checked ~ #slide3,
+    #s4:checked ~ #slide4 {
+      box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3),
+        0 11px 7px 0 rgba(0, 0, 0, 0.19);
+      transform: translate3d(0, 0, 0);
+    }
+
+    #s2:checked ~ #slide3,
+    #s3:checked ~ #slide4,
+    #s4:checked ~ #slide2 {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3),
+        0 2px 2px 0 rgba(0, 0, 0, 0.2);
+      transform: translate3d(15%, 0, -100px);
+      opacity: 0.4;
+    }
+
+    #slide2 {
+      background: $Purple;
+    }
+    #slide3 {
+      background: $Purple;
+    }
+    #slide4 {
+      background: $Purple;
+    }
+  }
+}
+
+@include tablet {
+  .making-money {
+    img {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .making-money {
+    min-height: 50vh;
+
+    #slider {
+      min-height: 30vh;
+      label {
+        line-height: 15rem;
+      }
+    }
+  }
+}
