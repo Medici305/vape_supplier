@@ -28,6 +28,10 @@
       //background: blue;
     }
     .right {
+      @include flex(row, end, center);
+      .platform-mobile {
+        display: none;
+      }
     }
   }
   .bottom {
@@ -89,6 +93,16 @@
     .top {
       @include flex(column, space-between, center);
       padding: 10% 6%;
+      .right {
+        @include flex(row, center, center);
+        .platform-mobile {
+          display: flex;
+          padding-top: 10%;
+        }
+        .platform-desktop {
+          display: none;
+        }
+      }
     }
     .bottom {
       .subscribe-section {

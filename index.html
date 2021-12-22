@@ -49,8 +49,10 @@
                     Start earning by showcasing your creativity. Sign up today to <br>
                     get access to fast and simple tasks today!
                 </p>
-                <button class="button-fill">Start Earning Now!</button>
-                <button class="button-solid">More Info</button>
+                <div class="button-group">
+                    <button class="button-fill">Start Earning Now!</button>
+                    <button class="button-solid">More Info</button>
+                </div>
             </div>
         </div>
     </Section>
@@ -69,8 +71,10 @@
                     Start earning by showcasing your creativity. Sign up today to 
                     get access to fast and simple tasks today!
                 </p>
-                <button class="button-fill">Start Earning</button>
-                <button class="button-solid">More Info</button>
+                <div class="button-group">
+                    <button class="button-fill">Start Earning</button>
+                    <button class="button-solid">More Info</button>
+                </div>
             </div>
         </div>
     </section>
@@ -89,13 +93,13 @@
             <input type="radio" name="slider" id="s3" checked>
             <input type="radio" name="slider" id="s4">
             <label for="s2" id="slide2">
-                <img src="./assets/Group 6.png" alt="carousel-item-1">
+                
             </label>
             <label for="s3" id="slide3">
-                <img src="./assets/Group 6.png" alt="carousel-item-2">
+                
             </label>
             <label for="s4" id="slide4">
-                <img src="./assets/Group 6.png" alt="carousel-item-3">
+               
             </label>
         </div>
         <!-- 3.3 Subtitle -->
@@ -128,12 +132,15 @@
                     <p>
                         Are you in?
                     </p>
-                    <button class="button-fill">Start Earning</button>
-                    <button class="button-solid">More Info</button>
+                    <div class="button-group">
+                        <button class="button-fill">Start Earning</button>
+                        <button class="button-solid">More Info</button>
+                    </div>
                 </div>
             </div>
             <div class="right">
-                <img src="./assets/vape_phone.png" alt="vape-phone">
+                <img class="platform-desktop" src="./assets/vape_phone.png" alt="vape-phone">
+                <img class="platform-mobile" src="./assets/vape-phone-sm.png" alt="vape-phone-small">
             </div>
         </div>
         <!-- 4.2 Subscribe -->
@@ -155,15 +162,86 @@
         </div>
     </section>
 
+    <!-- 5. footer section -->
     <section class="footer">
-        <div class="main-box">
-            <div class="top-box">
-
+        <!-- 5.0 Footer mobile footer -->
+        <div class="mobile-box">
+            <hr>
+            <h6>Navigate</h6>
+            <hr>
+            <h6>Collections</h6>
+            <hr>
+            <h6>Support</h6>
+            <hr>
+        </div>
+        <!-- 5.1 Footer top socials -->
+        <div class="top-box">
+            <a href="#">
+                <img src="./assets/Logo.svg" alt='company-logo' width='100%' height='100%' />
+            </a>
+            <div class="contact-details">
+                <h6>Contact us for more information: info@vapeinfluencer.com</h6>
+                <h6>Stay connected</h6>
             </div>
-            <hr>
-            <div class="nav-box"></div>
-            <hr>
-            <div class="bottom-box"></div>
+            <div class="socials">
+                <i class="fa fa-facebook fa-2x"></i>
+                <i class="fa fa-instagram fa-2x"></i>
+                <i class="fa fa-youtube fa-2x"></i>
+            </div>
+            <img class="trust-pilot" src="./assets/trust-pilot.png" alt="trust-pilot">
+        </div>
+        <hr class="line">
+        <!-- 5.2 Footer middle nav-links -->
+        <div class="nav-box">
+            <!-- 5.2.1 Customer service nav -->
+            <div class="footer-nav">
+                <h6>Customer Service</h6>
+                <ul>
+                    <li>E-club Loyalty</li>
+                    <li>Price Promise</li>
+                    <li>Contact Us</li>
+                    <li>Delivery FAQs</li>
+                    <li>Returns Policy</li>
+                </ul>
+            </div>
+            <!-- 5.2.2 Guides nav -->
+            <div class="footer-nav">
+                <h6>Guides</h6>
+                <ul>
+                    <li>New to vaping?</li>
+                    <li>Beginner guide</li>
+                    <li>E-liquid guide</li>
+                    <li>Which nicotine strength?</li>
+                    <li>What are Nic Salts?</li>
+                </ul>
+            </div>
+            <!-- 5.2.3 Vaping nav -->
+            <div class="footer-nav">
+                <h6>Vaping</h6>
+                <ul>
+                    <li>View all e-liquids</li>
+                    <li>View all hardware</li>
+                    <li>clearance</li>
+                    <li>Vape deals</li>
+                    <li>Vape brands</li>
+                </ul>
+            </div>
+            <!-- 5.2.4 Legal nav -->
+            <div class="footer-nav">
+                <h6>Legal</h6>
+                <ul>
+                    <li>Age verification</li>
+                    <li>Medical information</li>
+                    <li>Terms and conditions</li>
+                    <li>Privacy policy</li>
+                    <li>Product warranty</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="line">
+        <!-- 5.3 Footer bottom  -->
+        <div class="bottom-box">
+            <h6>Vape influencer Lydon House 10th Floor, Rmy, 62 Hagley Road, Birmingham, United Kingdom, B16 8PE</h6>
         </div>
     </section>
     <script src="./script.js" defer></script>

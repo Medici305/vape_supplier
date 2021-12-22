@@ -62,21 +62,21 @@
       opacity: 0.4;
     }
 
-    #slide2 {
-      background: none;
-      border: none;
-    }
-    #slide3 {
-      background: none;
-    }
+    #slide2,
+    #slide3,
     #slide4 {
-      background: none;
+      @include carousel-bg;
     }
   }
 }
 
 @include tablet {
   .making-money {
+    .sub-title {
+      img {
+        display: none;
+      }
+    }
   }
 }
 

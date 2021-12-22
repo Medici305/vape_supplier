@@ -15,10 +15,23 @@
 }
 
 @mixin header-bg {
-  background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center top/
-    cover;
+  background: url($header_desktop) no-repeat center top/ cover;
   @include mobile {
-    background-image: url("../../assets/Header_Home_Mobile.jpg");
+    background-image: url($header_mobile);
+  }
+}
+
+@mixin platform-bg {
+  background: url($platform_desktop) no-repeat center top/ cover;
+  @include mobile {
+    background-image: url($platform_mobile);
+  }
+}
+
+@mixin carousel-bg {
+  background: url($carousel_desktop) no-repeat center top/ cover;
+  @include mobile {
+    background-image: url($carousel_mobile);
   }
 }
 

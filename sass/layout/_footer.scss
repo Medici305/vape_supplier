@@ -5,4 +5,134 @@
 .footer {
   min-height: 60vh;
   background: $Purple;
+  padding: {
+    top: 2.5%;
+    bottom: 5%;
+  }
+  .top-box,
+  .nav-box,
+  .bottom-box {
+    //border: 2px solid rgb(255, 255, 255);
+  }
+  .top-box {
+    @include flex(row, space-between, center);
+    padding: 3% 0;
+    .contact-details,
+    .socials {
+      @include flex(row, space-between, center);
+      //border: 2px solid rgb(255, 255, 255);
+    }
+    .contact-details {
+      flex: 0.6;
+    }
+    .socials {
+      flex: 0.2;
+      color: #fff;
+      cursor: pointer;
+      .fa {
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: $Orange;
+        }
+      }
+    }
+  }
+  .nav-box {
+    padding: 3% 0;
+    @include flex(row, space-evenly, center);
+    .footer-nav {
+      //border: 2px solid rgb(255, 255, 255);
+      h6 {
+        margin-bottom: 1rem;
+        font-size: 1.05rem;
+      }
+      ul {
+        list-style: none;
+        & > li {
+          font-size: 0.75rem;
+          color: white;
+          padding: 0.3rem 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .bottom-box {
+    padding: 3% 0;
+    h6 {
+      font-size: 1.05rem;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  .mobile-box {
+    display: none;
+  }
+}
+
+//Responsive
+@include laptop {
+  .footer {
+    .top-box {
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 30vh;
+      .contact-details,
+      .socials {
+        flex: 0;
+      }
+      .contact-details {
+        width: 75%;
+      }
+      .socials {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    min-height: 80vh;
+    & > .line {
+      display: none !important;
+    }
+    .top-box {
+      min-height: 20vh;
+      .contact-details,
+      .socials,
+      .trust-pilot {
+        display: none;
+      }
+    }
+    .nav-box {
+      display: none;
+    }
+    .bottom-box {
+      display: none;
+    }
+    .mobile-box {
+      display: block;
+      padding: 15% 0;
+      h6 {
+        padding: 4% 0;
+        font: {
+          size: 1.05rem;
+          weight: 300;
+        }
+        position: relative;
+
+        &::after {
+          content: "+";
+          position: absolute;
+          cursor: pointer;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 2rem;
+          color: white;
+        }
+      }
+    }
+  }
 }

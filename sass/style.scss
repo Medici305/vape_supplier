@@ -15,7 +15,7 @@
 body {
   font-family: "proxima-nova", sans-serif;
   font-display: auto;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 a {
@@ -85,6 +85,11 @@ h5 {
   }
 }
 
+h6 {
+  color: $Orange;
+  font-size: 0.8rem;
+}
+
 p {
   color: $Grey_text;
   font-size: 1.1rem;
@@ -117,11 +122,15 @@ button {
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  width: 40%;
+  width: 45%;
   transition: all 0.2s ease-in-out;
   @include mobile {
     padding: 1rem 2rem;
   }
+}
+
+.button-group {
+  @include flex(row, space-between, center);
 }
 
 .button-fill {
