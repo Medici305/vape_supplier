@@ -3,9 +3,8 @@
 @import "../helpers/variables";
 
 .Jumbotron {
-  height: 100%;
+  min-height: 80vh;
   @include header-bg;
-
   nav {
     padding: 4% 0;
     @include flex(row, space-between, center);
@@ -15,7 +14,9 @@
       img {
         max-width: max-content;
         height: auto;
-        filter: invert(20%);
+        &:nth-child(2) {
+          display: none;
+        }
       }
     }
     .nav-links {
@@ -86,6 +87,23 @@
       .fa {
         display: block;
         margin: 1rem;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .Jumbotron {
+    nav {
+      a {
+        img {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            display: block;
+          }
+        }
       }
     }
   }

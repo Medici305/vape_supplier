@@ -1,6 +1,6 @@
 .Jumbotron {
-  height: 100%;
-  background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center top/cover;
+  min-height: 80vh;
+  background: url("../../assets/Header_Home_Desktop.jpg") no-repeat center/cover;
 }
 @media (max-width: 578px) {
   .Jumbotron {
@@ -20,7 +20,9 @@
 .Jumbotron nav a img {
   max-width: max-content;
   height: auto;
-  filter: invert(20%);
+}
+.Jumbotron nav a img:nth-child(2) {
+  display: none;
 }
 .Jumbotron nav .nav-links {
   flex: 1;
@@ -90,6 +92,14 @@
   .Jumbotron nav .fa {
     display: block;
     margin: 1rem;
+  }
+}
+@media (max-width: 578px) {
+  .Jumbotron nav a img:nth-child(1) {
+    display: none;
+  }
+  .Jumbotron nav a img:nth-child(2) {
+    display: block;
   }
 }
 .row {
@@ -253,6 +263,13 @@
 .platform .top .right {
   width: 100%;
 }
+.platform .top .left .platform-mobile {
+  display: none;
+}
+.platform .top .left p .dot,
+.platform .top .left p .read-more {
+  display: none;
+}
 .platform .top .right {
   display: flex;
   flex-direction: row;
@@ -329,13 +346,6 @@
     justify-content: center;
     align-items: center;
   }
-  .platform .top .right .platform-mobile {
-    display: flex;
-    padding-top: 10%;
-  }
-  .platform .top .right .platform-desktop {
-    display: none;
-  }
   .platform .bottom .subscribe-section {
     display: flex;
     flex-direction: column-reverse;
@@ -360,6 +370,22 @@
 @media (max-width: 578px) {
   .platform {
     padding: 15% 0;
+  }
+  .platform .top .left .platform-mobile {
+    display: flex;
+  }
+  .platform .top .left p .hide {
+    display: none;
+  }
+  .platform .top .left p .dot,
+.platform .top .left p .read-more {
+    display: inline;
+  }
+  .platform .top .left p .read-more {
+    color: #ff6200;
+  }
+  .platform .top .right {
+    display: none;
   }
   .platform .bottom {
     padding: 6%;
@@ -506,11 +532,17 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h5 {
+  family: "Bebas Neue";
+}
+
 h1 {
   color: #07223f;
   opacity: 0.1;
   width: 100%;
-  font-family: "Bebas Neue";
   font-size: 8.5rem;
   font-weight: 200;
 }
@@ -549,7 +581,6 @@ h2 img {
 
 h3 {
   color: #07223f;
-  font-family: "Bebas Neue";
   font-size: 3rem;
   font-weight: 200;
 }
@@ -566,7 +597,6 @@ h3 {
 
 h5 {
   color: #ff6200;
-  font-family: "Bebas Neue";
   font-size: 2.5rem;
   font-weight: 200;
 }
@@ -595,7 +625,7 @@ h4 {
 }
 
 section {
-  padding: 0 5%;
+  padding: 0 10%;
 }
 @media (max-width: 992px) {
   section {

@@ -22,12 +22,18 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h5 {
+  family: "Bebas Neue";
+}
+
 h1 {
   color: $Purple;
   opacity: 0.1;
   width: 100%;
   font: {
-    family: "Bebas Neue";
     size: 8.5rem;
     weight: 200;
   }
@@ -64,7 +70,6 @@ h2 {
 h3 {
   color: $Purple;
   font: {
-    family: "Bebas Neue";
     size: 3rem;
     weight: 200;
   }
@@ -79,7 +84,6 @@ h3 {
 h5 {
   color: $Orange;
   font: {
-    family: "Bebas Neue";
     size: 2.5rem;
     weight: 200;
   }
@@ -108,7 +112,7 @@ h4 {
 }
 
 section {
-  padding: 0 5%;
+  padding: 0 10%;
   @include laptop {
     padding: 0 5%;
   }

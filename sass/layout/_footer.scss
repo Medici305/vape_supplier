@@ -9,18 +9,12 @@
     top: 2.5%;
     bottom: 5%;
   }
-  .top-box,
-  .nav-box,
-  .bottom-box {
-    //border: 2px solid rgb(255, 255, 255);
-  }
   .top-box {
     @include flex(row, space-between, center);
     padding: 3% 0;
     .contact-details,
     .socials {
       @include flex(row, space-between, center);
-      //border: 2px solid rgb(255, 255, 255);
     }
     .contact-details {
       flex: 0.6;
@@ -41,7 +35,6 @@
     padding: 3% 0;
     @include flex(row, space-evenly, center);
     .footer-nav {
-      //border: 2px solid rgb(255, 255, 255);
       h6 {
         margin-bottom: 1rem;
         font-size: 1.05rem;

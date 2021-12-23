@@ -15,7 +15,7 @@
 }
 
 @mixin header-bg {
-  background: url($header_desktop) no-repeat center top/ cover;
+  background: url($header_desktop) no-repeat center / cover;
   @include mobile {
     background-image: url($header_mobile);
   }
